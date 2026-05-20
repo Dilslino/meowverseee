@@ -10,19 +10,23 @@ const GENERIC = `buat foto cewek lagi jalan keren, sinematik, viral, full hd, ma
 const STRUCTURED = [
   {
     k: "Subject",
-    v: "Wanita 25 tahun, jaket linen krem, celana wide-leg, rambut hitam panjang",
+    v: "Wanita 25 tahun, jaket linen krem, celana wide-leg, rambut hitam panjang sebahu.",
   },
   {
-    k: "Motion",
-    v: "Berjalan pelan ke arah kamera, langkah natural, tangan ringan di samping",
+    k: "Action",
+    v: "[00:00–00:03] Tiga langkah pelan ke arah kamera. [00:03–00:06] Berhenti, tangan kanan menyentuh tepi jaket. [00:06–00:08] Kepala miring 4° lalu kembali.",
   },
   {
-    k: "Emotion",
-    v: "Tenang, sedikit tersenyum, percaya diri",
+    k: "Shot",
+    v: "Slow dolly-in 30cm, 35mm, f/2.0, eye-level, depth of field dangkal.",
   },
   {
-    k: "Camera",
-    v: "Slow dolly-in 35mm, eye-level, depth of field dangkal, golden hour",
+    k: "Lighting",
+    v: "Golden hour 6500K dari kanan-belakang, fill reflector cream dari kiri. Palette: oat, cream, walnut, warm amber.",
+  },
+  {
+    k: "Audio",
+    v: "Ambient: angin pelan, langkah di gravel. SFX: gesekan jaket linen di 00:04. No dialogue.",
   },
 ];
 
@@ -99,7 +103,7 @@ export function BeforeAfter() {
               </span>
             </div>
             <h3 className="mt-4 font-display text-xl tracking-tighter2 text-ink">
-              Subject, motion, emotion, camera
+              Subject, action, shot, lighting, audio
             </h3>
 
             <dl className="mt-5 space-y-2.5">

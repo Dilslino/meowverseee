@@ -8,9 +8,10 @@ export interface PromptItem {
   difficulty: "Pemula" | "Menengah" | "Lanjutan";
   preview: string;
   subject: string;
-  motion: string;
-  emotion: string;
-  camera: string;
+  action: string;
+  shot: string;
+  lighting: string;
+  audio: string;
   negative: string;
   tags: string[];
 }
@@ -34,9 +35,10 @@ export function getPromptById(id: string): PromptItem | undefined {
 export function formatPromptText(p: PromptItem): string {
   return [
     `Subject: ${p.subject}`,
-    `Motion: ${p.motion}`,
-    `Emotion: ${p.emotion}`,
-    `Camera: ${p.camera}`,
+    `Action: ${p.action}`,
+    `Shot: ${p.shot}`,
+    `Lighting & palette: ${p.lighting}`,
+    `Audio: ${p.audio}`,
     `Negative prompt: ${p.negative}`,
   ].join("\n");
 }

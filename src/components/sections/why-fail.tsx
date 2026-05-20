@@ -15,7 +15,7 @@ const ITEMS = [
     icon: Layers,
     title: "No structure",
     bridge: "Inconsistent result",
-    body: "Tanpa subject, motion, emotion, dan camera yang jelas, model bingung apa yang harus dipertahankan dan apa yang bebas berubah.",
+    body: "Tanpa subject, action, shot, lighting, dan audio yang jelas, model nebak. Itulah kenapa output kamu inkonsisten dari satu generate ke generate berikutnya.",
   },
   {
     icon: Coins,

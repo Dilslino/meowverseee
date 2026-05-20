@@ -370,9 +370,10 @@ function PromptDetail({ item }: { item: PromptItem }) {
       <dl className="mt-6 space-y-3">
         {[
           { k: "Subject", v: item.subject },
-          { k: "Motion", v: item.motion },
-          { k: "Emotion", v: item.emotion },
-          { k: "Camera", v: item.camera },
+          { k: "Action", v: item.action },
+          { k: "Shot", v: item.shot },
+          { k: "Lighting", v: item.lighting },
+          { k: "Audio", v: item.audio },
         ].map((row) => (
           <div
             key={row.k}

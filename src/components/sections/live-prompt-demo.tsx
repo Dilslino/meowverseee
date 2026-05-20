@@ -18,9 +18,10 @@ import { useToast } from "@/components/ui/toast";
 
 const FIELDS: { key: keyof Omit<StructuredPrompt, "intent" | "negative">; label: string }[] = [
   { key: "subject", label: "Subject" },
-  { key: "motion", label: "Motion" },
-  { key: "emotion", label: "Emotion" },
-  { key: "camera", label: "Camera" },
+  { key: "action", label: "Action" },
+  { key: "shot", label: "Shot" },
+  { key: "lighting", label: "Lighting" },
+  { key: "audio", label: "Audio" },
 ];
 
 export function LivePromptDemo() {
@@ -215,16 +216,20 @@ function intentLabel(intent: string): string {
     case "couple_motion":
       return "Couple Motion";
     case "anti_face_drift":
-      return "Anti Face Drift";
+      return "Character Consistency";
     case "product":
       return "Product";
     case "viral_hook":
       return "Viral Hook";
     case "headshot":
-      return "Headshot";
+      return "Talking Head";
     case "landscape":
       return "Landscape";
+    case "dialogue_scene":
+      return "Dialogue Scene";
+    case "motion_control":
+      return "Motion Control";
     default:
-      return "Magic Prompt";
+      return "Cinematic Brand";
   }
 }

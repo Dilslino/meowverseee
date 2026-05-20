@@ -28,7 +28,7 @@ const PLANS: Plan[] = [
     tagline: "Coba dulu, tanpa risiko.",
     audience: "Buat creator yang baru mulai eksplor AI video.",
     features: [
-      "10 prompt starter siap pakai",
+      "5 prompt starter siap pakai",
       "Akses ke kategori Image→Video",
       "Update bulanan",
       "Negative prompt dasar",
@@ -42,7 +42,7 @@ const PLANS: Plan[] = [
     tagline: "Untuk creator harian.",
     audience: "Cocok kalau kamu posting konten 2-3 kali seminggu.",
     features: [
-      "60+ prompt di semua kategori",
+      "15+ prompt di semua kategori",
       "Anti face drift system",
       "Update mingguan",
       "Save & filter di library",
@@ -57,9 +57,9 @@ const PLANS: Plan[] = [
     tagline: "Untuk creator yang serius.",
     audience: "Buat yang udah live sebagai creator dan butuh hasil konsisten.",
     features: [
-      "120+ prompt premium, semua kategori",
+      "25+ prompt premium, semua kategori",
       "Workflow Couple Motion + Anti Drift",
-      "Magic Prompt builder",
+      "Veo 3.1 + Sora 2 prompt pack",
       "Update setiap rilis tool baru",
       "Priority request prompt",
       "Akses awal fitur baru",

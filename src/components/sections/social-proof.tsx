@@ -11,7 +11,7 @@ const NOTES = [
   },
   {
     body: "Lebih ngerti cara ngomong ke AI. Bukan cuma asal nulis 'sinematik, viral'.",
-    context: "Transition dari Midjourney ke Kling",
+    context: "Pindah dari prompt template ke Veo 3.1",
   },
   {
     body: "Lebih hemat generate. Yang biasanya 4-5 retry sekarang sering sekali jadi.",

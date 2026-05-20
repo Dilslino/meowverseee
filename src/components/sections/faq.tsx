@@ -15,11 +15,11 @@ const FAQS = [
   },
   {
     q: "Apakah ini layanan editing atau auto-generate?",
-    a: "Bukan. meowverseee menjual prompt system, bukan jasa edit. Kami juga tidak menggenerate video untuk kamu. Kamu tetap pakai tool AI favoritmu sendiri seperti Kling, Runway, Pika, atau Seedance.",
+    a: "Bukan. meowverseee menjual prompt system, bukan jasa edit. Kami juga tidak menggenerate video untuk kamu. Kamu tetap pakai tool AI favoritmu sendiri seperti Veo 3.1, Kling, Sora 2, Seedance, atau Wan.",
   },
   {
     q: "Tools apa saja yang didukung?",
-    a: "Saat ini fokus di Kling 1.6, Seedance Pro, Runway Gen-3, Luma Ray 2, Midjourney v6, Sora, dan Pika 2.0. Kalau ada tool baru yang ramai, kami update prompt-nya untuk paket Starter dan Pro.",
+    a: "Per Mei 2026 fokus di Veo 3.1 (Standard, Fast, Lite), Kling 2.6 Pro dan v3 Pro, Sora 2 dan Sora 2 Pro, Seedance 1.5 Pro, Wan 2.6, Hailuo 2.3, Luma Ray 2, PixVerse V5.5, dan LTXV 2. Setiap rilis tool baru, prompt-nya kami update untuk paket Starter dan Pro.",
   },
   {
     q: "Kalau hasil masih kurang bagus, salah siapa?",

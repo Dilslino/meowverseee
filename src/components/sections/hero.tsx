@@ -8,20 +8,27 @@ import { useToast } from "@/components/ui/toast";
 
 const HERO_PROMPT = {
   title: "Foto jadi video, natural",
-  subject: "Subjek persis seperti foto referensi, pakaian dipertahankan",
-  motion:
-    "Kepala miring 5° lalu kembali, kedipan tiap 4 detik, rambut bergerak halus",
-  emotion: "Tenang, sesuai mood foto, tidak menambah ekspresi baru",
-  camera: "Static 50mm, framing identik dengan referensi, tanpa zoom",
-  negative: "wajah berubah, baju berganti warna, latar bergeser, tangan ekstra",
+  tool: "Veo 3.1 Fast",
+  subject:
+    "Persis seperti foto referensi. Pakaian, rambut, latar, dan ekspresi awal dipertahankan identik.",
+  action:
+    "[00:00\u201300:01] Kedipan halus. [00:01\u201300:03] Kepala miring 4° ke kanan dan kembali. [00:03\u201300:04] Senyum tipis tumbuh tanpa membuka mulut.",
+  shot:
+    "Static framing identik dengan referensi, 50mm equivalent, tanpa zoom dan tanpa pan.",
+  lighting:
+    "Mengikuti lighting foto referensi. Tidak menambahkan key light baru.",
+  audio: "Mute, atau room tone -50 dB.",
+  negative:
+    "wajah berubah, baju berganti warna, latar bergeser, anggota badan tambahan, ekspresi melompat",
 };
 
 function promptToText() {
   return [
     `Subject: ${HERO_PROMPT.subject}`,
-    `Motion: ${HERO_PROMPT.motion}`,
-    `Emotion: ${HERO_PROMPT.emotion}`,
-    `Camera: ${HERO_PROMPT.camera}`,
+    `Action: ${HERO_PROMPT.action}`,
+    `Shot: ${HERO_PROMPT.shot}`,
+    `Lighting & palette: ${HERO_PROMPT.lighting}`,
+    `Audio: ${HERO_PROMPT.audio}`,
     `Negative prompt: ${HERO_PROMPT.negative}`,
   ].join("\n");
 }
@@ -107,8 +114,8 @@ export function Hero() {
               className="mt-12 grid grid-cols-3 gap-6 max-w-md"
             >
               {[
-                { v: "120+", l: "Prompt siap pakai" },
-                { v: "7", l: "Tool didukung" },
+                { v: "25+", l: "Prompt siap pakai" },
+                { v: "10", l: "Tool 2026" },
                 { v: "60s", l: "Setup pertama" },
               ].map((s) => (
                 <div key={s.l}>
@@ -130,7 +137,7 @@ export function Hero() {
             <PromptCard onCopy={onCopy} copied={copied} />
             <FloatingChip
               className="absolute -left-4 top-10 hidden md:flex"
-              label="Kling 1.6"
+              label="Veo 3.1"
             />
             <FloatingChip
               className="absolute -right-2 bottom-12 hidden md:flex"
@@ -153,9 +160,9 @@ function PromptCard({
 }) {
   const fields: { k: string; v: string }[] = [
     { k: "Subject", v: HERO_PROMPT.subject },
-    { k: "Motion", v: HERO_PROMPT.motion },
-    { k: "Emotion", v: HERO_PROMPT.emotion },
-    { k: "Camera", v: HERO_PROMPT.camera },
+    { k: "Action", v: HERO_PROMPT.action },
+    { k: "Shot", v: HERO_PROMPT.shot },
+    { k: "Lighting", v: HERO_PROMPT.lighting },
   ];
 
   return (
@@ -204,7 +211,7 @@ function PromptCard({
 
         <div className="mt-5 flex items-center justify-between gap-3">
           <p className="text-[12px] text-ink-muted">
-            Tested di Kling 1.6, Runway Gen-3, Pika 2.0.
+            Tested di Veo 3.1, Kling 2.6, Sora 2, Seedance 1.5 Pro.
           </p>
           <Button
             type="button"
