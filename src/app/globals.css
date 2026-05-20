@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+    --font-display: "Fraunces", Georgia, serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  html,
+  body {
+    background-color: #fffdfe;
+    color: #111827;
+  }
+
+  body {
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  ::selection {
+    background-color: #f8ddf1;
+    color: #7a2c58;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .glass {
+    background-color: rgba(255, 253, 254, 0.78);
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+  }
+
+  .ring-line {
+    box-shadow: 0 0 0 1px #f3d8ea;
+  }
+
+  .scrollbar-clean::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .scrollbar-clean::-webkit-scrollbar-thumb {
+    background: #f3d8ea;
+    border-radius: 999px;
+  }
+  .scrollbar-clean::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+  }
+
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+    background-image: radial-gradient(rgba(216, 95, 167, 0.06) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
